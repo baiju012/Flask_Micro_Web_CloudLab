@@ -6,7 +6,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return 'Welcome to my Youtube Channel'
+    return 'Welcome to my Home Page'
 
 @app.route('/success/<int:score>')
 def success(score):
