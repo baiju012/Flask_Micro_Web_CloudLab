@@ -8,6 +8,6 @@ app = Flask(__name__)
 def welcome():
   return "welcome to Home page of Fet."
 
-
+###Here I am assign main to my instance in conndition so that it will run my instance 
 if __name__ =='__main__':
    app.run(debug=False)
