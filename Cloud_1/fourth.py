@@ -8,10 +8,11 @@
 from flask import Flask,redirect,url_for
 
 ### I Create instance of Flask my instance name is app YOU may choose other
+
 app=Flask(__name__)
 
 
-### This route is for HOme Page
+### /: This route corresponds to the home page of the web application
 
 @app.route('/')
 def welcome():
@@ -20,17 +21,21 @@ def welcome():
 
 ### You may use variable parameter in route    
 ###You may provide html whole file or small code
+####These routes use variable rules to accept an integer value (score) as a parameter.
+
 
 @app.route('/success/<int:score>')
 def success(score):
     return "<html><body><h1>The Reult is passed</h1></body></html>"
 
-
 @app.route('/fail/<int:score>')
 def fail(score):
     return "The Person has failed and the marks is "+ str(score)
 
-### Result checker using redirect url
+
+### This route checks the value of marks and redirects the user to either the /success or /fail route using the url_for function.
+
+
 @app.route('/results/<int:marks>')
 def results(marks):
     result=""
@@ -39,7 +44,10 @@ def results(marks):
     else:
         result='success'
     return redirect(url_for(result,score=marks))
+    
 
 ###Here I am assign main to my instance in conndition so that it will run my instance 
+### starts the Flask development server with debugging enabled
+
 if __name__=='__main__':
     app.run(debug=True)
