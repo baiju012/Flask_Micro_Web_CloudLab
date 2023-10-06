@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 def welcome():
-  return "welcome to HOme page of Fet of HOstal"
+  return "welcome to Home page of Fet."
 
 
 if __name__ =='__main__':
