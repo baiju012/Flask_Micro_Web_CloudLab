@@ -1,1 +1,57 @@
+<html>
+<!-- The opening <html> tag signifies start of an HTML document -->
 
+<head>
+    <!-- The <head> section typically contains metadata and links to external resources, but it's empty in this -->
+</head>
+
+<body>
+    <!-- The <body> tag contains the visible content of the webpage -->
+
+    <form action="http://127.0.0.1:5000/login" method='GET'>
+    <!--
+        The <form> tag defines a form that will be used to collect user input.
+        The 'action' attribute specifies the URL where the form data will be sent when submitted.
+        The 'method' attribute specifies the HTTP method to be used when submitting the form (GET in this case).
+    -->
+
+    <table>
+        <!-- The <table> tag is used to create a table to structure the form elements. -->
+
+        <tr>
+            <!-- The <tr> tag defines a table row. -->
+            
+            <td>username</td>
+            <!-- The <td> tag defines a table cell, containing the label "username". -->
+
+            <td><input type="text" name='uname'></td>
+            <!--
+                - The <td> tag defines another table cell containing an input field.
+                - The <input> tag creates an input field, and 'type="text"' specifies it's a text input.
+                - The 'name' attribute assigns the name "uname" to this input, which will be used to identify it when submitted.
+            -->
+        </tr>
+
+        <tr>
+            <td>password</td>
+            <td><input type="password" name='pass'></td>
+            <!-- Similar to the username field, this is a password input field with the name "pass". -->
+        </tr>
+
+        <tr>
+            <td><input type="submit"></td>
+            <!--
+                - This <tr> contains a submit button.
+                - The <input> tag with 'type="submit"' creates a button that submits the form.
+            -->
+        </tr>
+    </table>
+    
+    </form>
+    <!-- The </form> tag closes the form element. -->
+
+</body>
+<!-- The </body> tag marks the end of the visible content. -->
+
+</html>
+<!-- The </html> tag marks the end of the HTML document. -->
