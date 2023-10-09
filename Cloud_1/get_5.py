@@ -1,3 +1,5 @@
+#both "GET" and "POST" can send data to the server
+
 #importing a template from flask module of render_template
 from flask import Flask,request, render_template
 
