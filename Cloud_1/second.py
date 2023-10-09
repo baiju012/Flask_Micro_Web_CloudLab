@@ -1,3 +1,4 @@
+# Basic web application of flask going to run on web server runable form enable.
 from flask import Flask
 
 app = Flask(__name__)
