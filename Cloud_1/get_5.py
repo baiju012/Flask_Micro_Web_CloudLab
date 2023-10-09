@@ -13,6 +13,8 @@ def welcome():
 
 # Define a route for the root URL ("/") that handles GET requests.
 # handles GET requests and retrieves a "uname" parameter from the query string.
+# the 'methods' attribute allowed for particular route on the server-side 
+# while the 'method' attribute in HTML specifies how the form data should be sent to the server when submitted from the client-side.
 
 @app.route('/login',methods=['GET'])
 def login():
