@@ -1,4 +1,4 @@
-# Basic web application of flask going to run on web server run form is enable 
+# Basic web application of flask going to run on web server run form is disable
 
 
 from flask import Flask
