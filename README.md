@@ -3,7 +3,7 @@
 <img src =https://github.com/baiju012/Cloud_1/assets/111991510/dae83c43-2512-4820-9eb4-f1f648c46c77 >
 
 
-## If You are facing error like "not found", "Not responding" 
+    ## If You are facing error like "not found", "Not responding" 
 
 # Server is Runnings
 * Confirm that your Flask server (get.py) is running. When you run python get.py
@@ -21,6 +21,5 @@ you have specified action="http://127.0.0.1:5000/login", which should match the 
 # Browser Cache:
 * Sometimes, browsers can cache responses. Try clearing your browser cache or opening the application in an incognito/private window to rule out any caching issues.
 
-
-  # Server Restart:
+# Server Restart:
   * If you make changes to your Flask code (get.py), make sure to restart the Flask server to apply the changes.
