@@ -16,7 +16,7 @@
 you have specified action="http://127.0.0.1:5000/login", which should match the host and port where your Flask app is running
 
 # Correct HTTP Method: 
-* Ensure that you are using the correct HTTP method in your form and route. In your code, you've defined the login route to accept GET requests # (methods=['GET']), which matches your form's method (method='GET')
+* Ensure that you are using the correct HTTP method in your form and route. In your code, you've defined the login route to accept GET requests  (methods=['GET']), which matches your form's method (method='GET')
 
 # Browser Cache:
 * Sometimes, browsers can cache responses. Try clearing your browser cache or opening the application in an incognito/private window to rule out any caching issues.
