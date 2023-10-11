@@ -12,7 +12,7 @@
 * In flask using webcam video streaming
 * Face and eye detection using opencv in flask
 * Comprision in face recogination
-* IN last a project
+* IN last a project using IBM cloud resources
 
 
 
