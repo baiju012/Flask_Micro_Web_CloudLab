@@ -2,6 +2,19 @@
 
 <img src =https://github.com/baiju012/Cloud_1/assets/111991510/dae83c43-2512-4820-9eb4-f1f648c46c77 >
 
+# Syllabus
+* Basic web application on flask(run on web server in enable and disable )
+* Building of url dynamically and have variable rules
+* GET and POST keyword of flask
+* Simple admission and Health care form by using flask, html
+* jinza2 template in flask
+* integrating css/js in flask
+* In flask using webcam video streaming
+* Face and eye detection using opencv in flask
+* Comprision in face recogination
+* IN last a project
+
+
 
 # If You are facing error like "not found", "Not responding" 
 
