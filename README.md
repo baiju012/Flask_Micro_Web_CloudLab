@@ -1,7 +1,6 @@
 # Cloud_1
 
-<img src = https://github.com/baiju012/Cloud_1/assets/111991510/d845d04b-7252-4818-9484-9e29bfb3f369
->
+[img](https://github.com/baiju012/Cloud_1/assets/111991510/d845d04b-7252-4818-9484-9e29bfb3f369)
 
 # Syllabus
 * Basic web application on flask(run on web server in enable and disable )
