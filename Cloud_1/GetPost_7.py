@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-  return render_template('form.html')
+  return render_template('getpost.html')
 
 
 # Define a route that requires both GET and POST requests
@@ -12,7 +12,7 @@ def welcome():
 def example_form():
     if request.method == 'GET':
         # Handle GET requests (display the form)
-        return render_template('form.html')
+        return render_template('getpost.html')
 
     if request.method == 'POST':
         # Handle POST requests (form submission)
