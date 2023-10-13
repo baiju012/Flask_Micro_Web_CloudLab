@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+
+<!DOCTYPE html>      <!-- Document type declaration for HTML5 -->
 <html>
 <head>
-    <title>Example Form</title>
+    <title>Example Form</title>       <!--title of the web page display at browser -->
 </head>
 <body>
-    <h1>Form For POST</h1>
-    <form method="POST" action='/submit'>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <input type="submit" value="Submit">
-    </form>
-
-    <h1> Form for GET</h1>
+    <h1>Form For POST</h1>            <!-- heading for the POST form section -->
+    <form method="POST" action='/submit'>         <!-- HTML form element for POST begins here -->
+        <label for="name">Name:</label>        <!-- Label for the input field, providing a description for the user -->
+        <input type="text" id="name" name="name">      <!-- Input field for entering the user's name -->
+        <input type="submit" value="Submit">      <!-- Submit button to send form data to the server -->
+    </form>                                       <!-- HTML form element for POST ends here -->
+    <h1>Form For GET</h1>               
     <form method="GET" action='/submit'>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name">
         <input type="submit" value="Submit">
-    </form>
+    </form> 
 </body>
 </html>
