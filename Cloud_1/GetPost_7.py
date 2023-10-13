@@ -12,11 +12,14 @@ def welcome():
 def example_form():
     if request.method == 'GET':
         # Handle GET requests (display the form)
-        return render_template('getpost.html')
+        name = request.args.get('name')
+         # f before the string, which denotes an f-string in Python. This allows you to embed the value of the name variable within the string.
+        return f'Hi there, {name}! Thank you for submitting the form.'
 
     if request.method == 'POST':
         # Handle POST requests (form submission)
         name = request.form.get('name')
+        # f before the string, which denotes an f-string in Python. This allows you to embed the value of the name variable within the string.
         return f'Hi there, {name}! Thank you for submitting the form.'
 
 if __name__ == '__main__':
