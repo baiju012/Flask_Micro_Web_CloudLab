@@ -9,7 +9,7 @@ app=Flask(__name__)
 @app.route('/')
 
 def welcome():
-  return render_template('get.html')
+  return render_template('get_5.html')
 
 # Define a route for the root URL ("/") that handles GET requests.
 # handles GET requests and retrieves a "uname" parameter from the query string.
