@@ -4,8 +4,15 @@
     <title>Example Form</title>
 </head>
 <body>
-    <h1>Example Form</h1>
+    <h1>Form For POST</h1>
     <form method="POST" action='/submit'>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1> Form for GET</h1>
+    <form method="GET" action='/submit'>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name">
         <input type="submit" value="Submit">
