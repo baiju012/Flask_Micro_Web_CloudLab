@@ -6,7 +6,7 @@ app=Flask(__name__)
 @app.route('/')
 
 def welcome():
-  return render_template('post.html')
+  return render_template('post_6.html')
 
 
 
