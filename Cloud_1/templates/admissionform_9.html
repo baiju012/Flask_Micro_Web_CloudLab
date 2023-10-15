@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>College serve Form</title>
+       
+    <style>
+        /* Styling for the background of the body */
+        body {
+                background-image: url("/static/cn.png");   /* Set a background image */
+                background-size: cover;                   /* Make the image cover the entire viewport cover,contain,auto,50% 50% */
+             }
+  
+          
+     
+    </style>
+      
+
+    </head>
+
+<body>
+    <h1>College admission form</h1>
+    <form action='/' method="POST" >
+        <p>
+            Name:<input type="text" name="name" required>
+        </p>
+        <p>
+            DOB:<input type="text" name="DOB" required>
+        </p>
+        <p>
+            Contact:<input type="number" name="phone_number" required>
+        </p>
+        <p>
+            State:<input type="text" name="state" value="state" required>
+        </p>
+        <p>
+            mark_12th:<input type="text" name="mark_12th" value="0" required>
+        </p>
+        
+        <p>
+            <input type="submit" value="submit">
+        </p>
+        
+    </form>
+    
+    <!--Display the form details below the submit button-->
+    
+    {% if submitted %}
+    <h2>Customer Details:</h2>
+    <p>Name:{{name}}</p>
+    <p>Age:{{age}}</p>
+    <p>Contact:{{phone_number}}</p>
+    <p>Height:{{height}}</p>
+    <p>mark_12th:{{mark_12th}}</p>
+    {% endif %}
+    
+</body>
+
+
+</html>
