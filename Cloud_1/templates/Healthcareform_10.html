@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Health Insurance Form</title>
+        <style>
+            body {
+                background-image:url("/static/image/bg.png");
+                background-size:cover;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+            }
+          </style>
+          
+    </head>
+
+<body>
+    <h1>Health Insurance Form</h1>
+    <form method="POST" action='/'>
+        <p>
+            Name:<input type="text" name="name" required>
+        </p>
+        <p>
+            Age:<input type="text" name="age" required>
+        </p>
+        <p>
+            Pre-Existing Medical Conditions:<input type="checkbox" name="pre_existing_conditions">
+        </p>
+        <p>
+            Contact:<input type="number" name="phone_number" required>
+        </p>
+        <p>
+            Height:<input type="text" name="height" required>
+        </p>
+        <p>
+            Weight:<input type="text" name="weight" required>
+        </p>
+        
+        <p>
+            <input type="submit" value="submit">
+        </p>
+        
+    </form>
+    
+    <!--Display the form details below the submit button-->
+    
+    {% if submitted %}
+    <h2>Customer Details:</h2>
+    <p>Name:{{name}}</p>
+    <p>Age:{{age}}</p>
+    <p>Pre-Existing Medical Conditions:{{pre_existing_conditions}}</p>
+    <p>Contact:{{phone_number}}</p>
+    <p>Height:{{height}}</p>
+    <p>Weight:{{weight}}</p>
+    {% endif %}
+    
+</body>
+
+
+</html>
