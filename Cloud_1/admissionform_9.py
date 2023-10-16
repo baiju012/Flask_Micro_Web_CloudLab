@@ -16,7 +16,7 @@ def admission_form():
         eligible_for_admission = mark_12th > 400
 
         # Pass the form data to the template
-        return render_template('admissionform.html',
+        return render_template('admissionform_9.html',
                                name=name,
                                DOB=DOB,
                                phone_number=phone_number,
@@ -27,7 +27,7 @@ def admission_form():
                               
                                )
 
-    return render_template('admissionform.html')
+    return render_template('admissionform_9.html')
 
 
 if __name__ == '__main__':
