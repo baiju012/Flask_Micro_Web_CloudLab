@@ -4,16 +4,53 @@
         <title>College serve Form</title>
        
     <style>
+                                        /* style for header h1 */
+        h1 {
+            font-size: 24px;     /* Adjust the font size */
+            font-weight: bold;   /* Make the text bold,normal,lighter,600 */
+            color: blue;      /* Change the text color to blue,red,white, */
+            text-align: center;   /* Center-align the text,left,right */
+            text-transform: uppercase;   /* Convert text to uppercase */
+            margin: 10px 0;      /* Add margin to control spacing */
+            cursor: pointer;      /* Change the cursor to a pointer when hovering over the h1 wait, */
+           }
+          
+
+           h2 {
+            font-size: 20px; /* Adjust the font size */
+            color: blue; /* Change the text color to blue */
+            font-weight: bold; /* Make the text bold */
+              }
+        
+
+       
+        form {
+                 text-align: center; /* Center-align the content inside the form,left,right */
+             }
+           
+             
+                                    /* Styling for submit buttons */
+        input[type="submit"] {
+                background-color: red;        /* Background color is red */
+                color: white;                /* Text color is white */
+                padding: 10px 20px;          /* Padding around the button */
+                border: 2px dashed black;    /* Dashed border,, 2px width,2px solid black, black color */
+                 cursor: pointer;             /* Change cursor to a hand pointer on hover pointer, wait,crosshair,help */
+                              }  
+                             
+       
+         
         /* Styling for the background of the body */
         body {
                 background-image: url("/static/image/cn.png");   /* Set a background image */
                 background-size: cover;                   /* Make the image cover the entire viewport cover,contain,auto,50% 50% */
-             }
-  
-          
-     
+                text-align: center;                
+                 } 
+                 
+            
+         
     </style>
-      
+
 
     </head>
 
@@ -30,10 +67,10 @@
             Contact:<input type="number" name="phone_number" required>
         </p>
         <p>
-            State:<input type="text" name="state" value="state" required>
+            State:<input type="text" name="state" required>
         </p>
         <p>
-            mark_12th:<input type="text" name="mark_12th" value="0" required>
+            mark_12th:<input type="text" name="mark_12th" required>
         </p>
         
         <p>
@@ -47,13 +84,25 @@
     {% if submitted %}
     <h2>Customer Details:</h2>
     <p>Name:{{name}}</p>
-    <p>Age:{{age}}</p>
+    <p>DOB:{{DOB}}</p>
     <p>Contact:{{phone_number}}</p>
-    <p>Height:{{height}}</p>
+    <p>State:{{state}}</p>
     <p>mark_12th:{{mark_12th}}</p>
+    
+
+    <h2>Admission Status:</h2>
+{% if submitted %}
+    {% if eligible_for_admission %}
+        <p>Eligible for Admission</p>
+    {% else %}
+        <p>Not eligible for Admission</p>
     {% endif %}
+{% else %}
+    <p>Please submit the form to check eligibility.</p>
+{% endif %}
+
+{% endif %}
+
     
 </body>
-
-
 </html>
