@@ -20,11 +20,11 @@
 * Confirm that your Flask server (appname.py) is running. When you run python appname.py
 # Check The URL:
 * Check the URL:  you're accessing the correct URL in your browser. In your code, you're defining the route as /login
-* make sure you're trying to access http://127.0.0.1:5000/login
+* make sure you're trying to access http://127.0.0.1:5000
 
  # Port and Host:
  * Verify that the host and port in your HTML form match the Flask server configuration. In your HTML form
-you have specified action="http://127.0.0.1:5000/login", which should match the host and port where your Flask app is running
+you have specified action="http://127.0.0.1:5000", which should match the host and port where your Flask app is running
 
 # Correct HTTP Method: 
 * Ensure that you are using the correct HTTP method in your form and route. In your code, you've defined the login route to accept GET requests  (methods=['GET']), which matches your form's method (method='GET')
@@ -33,4 +33,4 @@ you have specified action="http://127.0.0.1:5000/login", which should match the 
 * Sometimes, browsers can cache responses. Try clearing your browser cache or opening the application in an incognito/private window to rule out any caching issues.
 
 # Server Restart:
-  * If you make changes to your Flask code (get.py), make sure to restart the Flask server to apply the changes.
+  * If you make changes to your Flask code (appname.py), make sure to restart the Flask server to apply the changes.
