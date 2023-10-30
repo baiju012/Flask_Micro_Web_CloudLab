@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return render_template('firstjinza_8.html')
+    return render_template('firstjinza_8.html')  # See in templates folder in same repo
 
 @app.route('/success/<int:score>')
 def success(score):
@@ -13,7 +13,7 @@ def success(score):
         res = "MORE"
     else:
         res = "LESS"
-    return render_template('secondjinza_8.html', X=res)
+    return render_template('secondjinza_8.html', X=res)  # See in templates folder in same repo for html
 
 
 @app.route('/submit', methods=['POST', 'GET'])
