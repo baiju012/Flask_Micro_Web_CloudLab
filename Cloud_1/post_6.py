@@ -6,6 +6,7 @@ app=Flask(__name__)
 @app.route('/')
 
 def welcome():
+  # for this html go to templates folder in this repository
   return render_template('post_6.html')
 
 
