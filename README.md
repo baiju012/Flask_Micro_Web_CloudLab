@@ -7,7 +7,7 @@
 # Syllabus
 * Basic web application on flask(run on web server in enable and disable )
 * Building of url dynamically and have variable rules
-* GET and POST keyword of flask
+* GET and POST methods of flask
 * * jinza2 template in flask
 * Simple admission and Health care form by using flask, html
 * integrating css/js in flask
