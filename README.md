@@ -17,7 +17,7 @@
 # If You are facing error like "not found", "Not responding" 
 
 # Server is Runnings
-* Confirm that your Flask server (get.py) is running. When you run python get.py
+* Confirm that your Flask server (appname.py) is running. When you run python appname.py
 # Check The URL:
 * Check the URL:  you're accessing the correct URL in your browser. In your code, you're defining the route as /login
 * make sure you're trying to access http://127.0.0.1:5000/login
