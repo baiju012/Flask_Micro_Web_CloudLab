@@ -1,3 +1,5 @@
+# In this we will see get and post together with same url diffrence
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
