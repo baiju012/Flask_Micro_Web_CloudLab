@@ -19,7 +19,7 @@ def welcome():
 
 
 ###Here I am assign main to my instance in conndition so that it will run my instance 
-### starts the Flask development server with debugging enabled
+### starts the Flask development server with debugging disabled
 
 if __name__ =='__main__':
    app.run(debug=False)
