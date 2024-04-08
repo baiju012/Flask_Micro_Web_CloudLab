@@ -1,3 +1,5 @@
+We will launch a book for basic Python, Flask, Cloud computing, RedHat openshift, Project creation and deployment on cloud and additional section of IBM product and features.
+
 # Cloud Lab
 
 ![image](https://github.com/baiju012/Cloud_1/assets/111991510/d845d04b-7252-4818-9484-9e29bfb3f369)
