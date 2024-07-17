@@ -1,0 +1,384 @@
+# So You have a company and you want to make application in python for your company
+# Method founction associated with class
+# Each employ have attribute so you have to create class have blueprint for each employee no need to do manually
+class Employee:
+  pass
+
+emp_1 = Employee()
+emp_2 = Employee()
+
+print(emp_1)
+print(emp_2)
+
+
+
+
+
+
+
+
+
+
+
+#Instance variable
+# Manully working with class is not any benifit
+class Employee:
+  pass
+
+emp_1 = Employee()
+emp_2 = Employee()
+
+print(emp_1)
+print(emp_2)
+
+emp_1.first = "Asif"
+emp_1.last = "Ali"
+emp_1.email = 'asifali@gmail.com'
+emp_1.salary = 50000
+
+
+emp_2.first = "Ram"
+emp_2.last = "shaym"
+emp_2.email = 'Ramshaym@gmail.com'
+emp_2.salary = 40000
+
+print(emp_1.email)
+print(emp_2.email)
+
+
+
+
+
+
+
+# doing same using init method
+
+class Employee:
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+print(emp_1.email)
+print(emp_2.email)
+
+# For printing 
+#print('{} {} '.format(emp_1, emp_1.last))
+
+
+
+
+
+
+
+
+
+
+
+
+# Each time for display you will type each but do making a functionalaty.put functionalaty at one place
+# by making a function for printing
+
+class Employee:
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+print(emp_1.email)
+print(emp_2.email)
+
+print(emp_1.fullname()) # method as return value
+# for emp_2 full address
+print(emp_2.fullname())
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+print(emp_1.email)
+print(emp_2.email)
+
+print(emp_1.fullname())
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname():
+    return '{} {}'.format(self.first, self.last)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+print(emp_1.fullname())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+emp_1.fullname()
+print(Employee.fullname(emp_1))
+
+
+
+
+
+
+
+
+
+
+
+
+#Class Variables
+
+class Employee:
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+  def apply_raise(self):
+   self.pay = int(self.pay*1.04)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+print(emp_1.pay)
+emp_1.apply_raise()
+print(emp_1.pay)
+
+
+
+
+
+
+
+
+
+#Class Variables
+class Employee:
+  raise_amount = 1.04
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+  def apply_raise(self):
+   self.pay = int(self.pay*raise_amount)
+  
+  # def apply_raise(self):
+  #  self.pay = int(self.pay*Employee.raise_amount)
+
+  # def apply_raise(self):
+  #  self.pay = int(self.pay*self.raise_amount)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+# print(emp_1.pay)
+# emp_1.apply_raise()
+# print(emp_1.pay)
+
+emp_1.raise_amount
+Employee.raise_amount
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Class Variables
+class Employee:
+  raise_amount = 1.04
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+ 
+  def apply_raise(self):
+   self.pay = int(self.pay*Employee.raise_amount)
+
+  # def apply_raise(self):
+  #  self.pay = int(self.pay*self.raise_amount)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+print(Employee.raise_amount)
+emp_1.raise_amount
+print(emp_2.raise_amount)
+
+
+# print(emp_1.__dict__)
+# print(Employee.__dict__)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Class Variables
+class Employee:
+  raise_amount = 1.04
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+ 
+  def apply_raise(self):
+   self.pay = int(self.pay*Employee.raise_amount)
+
+  # def apply_raise(self):
+  #  self.pay = int(self.pay*self.raise_amount)
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+
+Employee.raise_amount = 1.05
+# emp_1.raise_amount = 1.05
+# do this after changing emp1_1 raise amount
+# print(emp1.__dict__)
+print(Employee.raise_amount)
+emp_1.raise_amount
+print(emp_2.raise_amount)
