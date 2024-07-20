@@ -277,6 +277,7 @@ emp_2 = Employee('Ram', 'Shaym', 40000)
 # emp_1.apply_raise()
 # print(emp_1.pay)
 
+#Something 
 emp_1.raise_amount
 Employee.raise_amount
 
@@ -299,6 +300,7 @@ Employee.raise_amount
 
 
 #Class Variables
+#Best Way
 class Employee:
   raise_amount = 1.04
   #special init method # another thing it is constructor
@@ -327,7 +329,7 @@ print(Employee.raise_amount)
 emp_1.raise_amount
 print(emp_2.raise_amount)
 
-
+#You can see here You can access class variable from class and instance both
 # print(emp_1.__dict__)
 # print(Employee.__dict__)
 
@@ -382,3 +384,738 @@ Employee.raise_amount = 1.05
 print(Employee.raise_amount)
 emp_1.raise_amount
 print(emp_2.raise_amount)
+
+
+
+
+
+
+
+
+
+
+#use classmethod as alternative constructor means use class method as multiple way creating our object #Alteranative
+#classmethod
+class Employee:
+  raise_amt = 1.04
+  #num_of_emps = 0
+  #special init method # another thing it is constructor
+  def __init__(self, first, last, pay):
+    #first argument get automatic, set all instance method
+    self.first = first
+    self.last = last
+    self.pay = pay
+    self.email = first + '.' + last + '@gmail.com'
+    #Employee.num_of_emps += 1
+  
+  def fullname(self):
+    return '{} {}'.format(self.first, self.last)
+
+ 
+  def apply_raise(self):
+   self.pay = int(self.pay*Employee.raise_amount)
+
+  @classmethod
+  def set_raise_amt(cls, amount):
+    #pass
+    cls.raise_amt = amount
+
+
+emp_1 = Employee('Asif', 'Ali', 50000)
+emp_2 = Employee('Ram', 'Shaym', 40000)
+
+
+emp_str_1 = 'John-Doe-70000'
+emp_str_2 = 'Steve-Smith-30000'
+emp_str_3 = 'Jane-Doe-90000'
+
+first, last, pay = emp_str_1.split('-')
+
+new_emp_1 = Employee(first, last, pay)
+#new_emp_1 = Employee.from_string(emp_str_1)
+
+print(new_emp_1.email)
+print(new_emp_1.pay)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+
+    num_of_emps = 0
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+        Employee.num_of_emps += 1
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+    @classmethod
+    def set_raise_amt(cls, amount):
+        cls.raise_amt = amount
+
+    @classmethod
+    def from_string(cls, emp_str):
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
+
+
+emp_1 = Employee('Corey', 'Schafer', 50000)
+emp_2 = Employee('Test', 'Employee', 60000)
+
+
+emp_str_1 = 'John-Doe-70000'
+emp_str_2 = 'Steve-Smith-30000'
+emp_str_3 = 'Jane-Doe-90000'
+
+#new_emp_1 = Employee(first, last, pay)
+new_emp_1 = Employee.from_string(emp_str_1)
+
+
+print(new_emp_1.email)
+print(new_emp_1.pay)
+
+
+
+
+
+
+
+
+
+
+
+#static method
+class Employee:
+
+    num_of_emps = 0
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+        Employee.num_of_emps += 1
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+    @classmethod
+    def set_raise_amt(cls, amount):
+        cls.raise_amt = amount
+
+    @classmethod
+    def from_string(cls, emp_str):
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
+
+
+#Regular method pass instance as first argument as self and class method pass cls as first argument and 
+# staticmethod don't pass any instance or class as first argument automatic
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
+
+
+emp_1 = Employee('Corey', 'Schafer', 50000)
+emp_2 = Employee('Test', 'Employee', 60000)
+
+first, last, pay = emp_str_1.split('-')
+
+#new_emp_1 = Employee(first, last, pay)
+new_emp_1 = Employee.from_string(emp_str_1)
+
+import datetime
+my_date = datetime.date(2016, 7, 11)
+
+print(Employee.is_workday(my_date))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#static method
+class Employee:
+
+    num_of_emps = 0
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+        Employee.num_of_emps += 1
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+class Developer(Employee):
+  pass
+
+
+# dev_1 = Employee('Corey', 'Schafer', 50000)
+# dev_2 = Employee('Test', 'Employee', 60000)
+dev_1 = Developer('Corey', 'Schafer', 50000)
+dev_2 = Developer('Test', 'Employee', 60000)
+
+# print(dev_1.email)
+# print(dev_2.email)
+
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
+# print(help(Developer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#static method
+class Employee:
+
+    num_of_emps = 0
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+        Employee.num_of_emps += 1
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+class Developer(Employee):
+  raise_amt = 1.10
+
+
+# dev_1 = Employee('Corey', 'Schafer', 50000)
+# dev_2 = Employee('Test', 'Employee', 60000)
+dev_1 = Developer('Corey', 'Schafer', 50000)
+dev_2 = Developer('Test', 'Employee', 60000)
+
+# print(dev_1.email)
+# print(dev_2.email)
+
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
+# print(help(Developer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#static method
+class Employee:
+
+    num_of_emps = 0
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+        Employee.num_of_emps += 1
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+class Developer(Employee):
+  raise_amt = 1.10
+
+
+dev_1 = Employee('Corey', 'Schafer', 50000)
+# dev_2 = Employee('Test', 'Employee', 60000)
+# dev_1 = Developer('Corey', 'Schafer', 50000)
+dev_2 = Developer('Test', 'Employee', 60000)
+
+# print(dev_1.email)
+# print(dev_2.email)
+
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
+# print(help(Developer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#static method
+class Employee:
+
+    num_of_emps = 0
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+        Employee.num_of_emps += 1
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+class Developer(Employee):
+  raise_amt = 1.10
+  def __init__(self, first, last, pay, prog_lang):
+    #do manually all by self and use super or parent class
+    super().__init__(first,last,pay)
+    # Employee.__init__(self,first,last,pay)
+    self.prog_lang = prog_lang
+
+
+# dev_1 = Employee('Corey', 'Schafer', 50000)
+# dev_2 = Employee('Test', 'Employee', 60000)
+dev_1 = Developer('Corey', 'Schafer', 50000, 'Python')
+dev_2 = Developer('Test', 'Employee', 60000, 'java')
+
+print(dev_1.email)
+print(dev_1.prog_lang)
+
+# print(dev_1.pay)
+# dev_1.apply_raise()
+# print(dev_1.pay)
+# # print(help(Developer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Inheritance
+class Employee:
+
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+
+class Developer(Employee):
+    raise_amt = 1.10
+
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first, last, pay)
+        self.prog_lang = prog_lang
+
+
+class Manager(Employee):
+
+    def __init__(self, first, last, pay, employees=None):
+        super().__init__(first, last, pay)
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees
+
+    def add_emp(self, emp):
+        if emp not in self.employees:
+            self.employees.append(emp)
+
+    def remove_emp(self, emp):
+        if emp in self.employees:
+            self.employees.remove(emp)
+
+    def print_emps(self):
+        for emp in self.employees:
+            print('-->', emp.fullname())
+
+
+dev_1 = Developer('Corey', 'Schafer', 50000, 'Python')
+dev_2 = Developer('Test', 'Employee', 60000, 'Java')
+
+mgr_1 = Manager('Sue', 'Smith', 90000, [dev_1])
+
+print(mgr_1.email)
+
+mgr_1.add_emp(dev_2)
+mgr_1.print_emps()
+# mgr_1.remove_emp(dev_2)
+
+# print(isinstance(mgr_1, Employee))
+# print(issubclass(Manager, Developer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#property decorators getter, setters and deleters
+class Employee:
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+emp_1 = Employee('John', 'Smith')
+
+#p
+# emp_1.first = 'jim'
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def email(self):
+        return '{}.{}@email.com'.format(self.first, self.last)
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+  
+emp_1 = Employee('John', 'Smith')
+
+emp_1.first = 'jim'
+
+print(emp_1.first)
+print(emp_1.email())
+print(emp_1.fullname())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+#decorator
+    @property
+    def email(self):
+        return '{}.{}@email.com'.format(self.first, self.last)
+
+
+    @property
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+  
+emp_1 = Employee('John', 'Smith')
+
+emp_1.first = 'jim'
+
+#You can't set attribute 
+#emp_1.fullname = 'Hello class'
+
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+#decorator
+    @property
+    def email(self):
+        return '{}.{}@email.com'.format(self.first, self.last)
+
+
+    @property
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+
+    @fullname.setter
+    def fullname(self, name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
+  
+emp_1 = Employee('John', 'Smith')
+
+emp_1.first = 'jim'
+
+
+emp_1.fullname = 'Hello class'
+
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    @property
+    def email(self):
+        return '{}.{}@email.com'.format(self.first, self.last)
+
+    @property
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+    
+    @fullname.setter
+    def fullname(self, name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
+    
+    @fullname.deleter
+    def fullname(self):
+        print('Delete Name!')
+        self.first = None
+        self.last = None
+
+
+emp_1 = Employee('John', 'Smith')
+emp_1.fullname = "Hello Class"
+
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+del emp_1.fullname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
