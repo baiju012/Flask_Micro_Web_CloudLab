@@ -1110,6 +1110,50 @@ del emp_1.fullname
 
 
 
+Method overloding
+class Bird:
+    def intro(self):
+        print("There are many types of birds.")
+        
+    def flight(self, speed=None):
+        if speed is not None:
+            print(f"Some birds can fly at {speed} speed.")
+        else:
+            print("Most of the birds can fly but some cannot.")
+
+class Sparrow(Bird):
+    def flight(self, speed=None):
+        if speed is not None:
+            print(f"Sparrows can fly at {speed} speed.")
+        else:
+            print("Sparrows can fly.")
+
+class Ostrich(Bird):
+    def flight(self, speed=None):
+        if speed is not None:
+            print(f"Ostriches cannot fly but can run at {speed} speed.")
+        else:
+            print("Ostriches cannot fly.")
+
+# Create instances of each class
+obj_bird = Bird()
+obj_sparrow = Sparrow()
+obj_ostrich = Ostrich()
+
+# Call methods on Bird instance
+obj_bird.intro()
+obj_bird.flight()
+obj_bird.flight(10)
+
+# Call methods on Sparrow instance
+obj_sparrow.intro()
+obj_sparrow.flight()
+obj_sparrow.flight(20)
+
+# Call methods on Ostrich instance
+obj_ostrich.intro()
+obj_ostrich.flight()
+obj_ostrich.flight(50)
 
 
 
