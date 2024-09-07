@@ -1,0 +1,38 @@
+<!-- blog/templates/blog/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Website</title>
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="{% static 'images/logo.jpeg' %}" alt="Website Logo">
+        <h1>Welcome to Our E-Commerce Store</h1>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="product">
+            <img src="{% static 'images/pro1.jpeg' %}" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Price: $50</p>
+        </div>
+        <div class="product">
+            <img src="{% static 'images/pro2.jpeg' %}" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Price: $70</p>
+        </div>
+        <div class="product">
+            <img src="{% static 'images/pro3.jpeg' %}" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Price: $90</p>
+        </div>
+    </section>
+</body>
+</html>
