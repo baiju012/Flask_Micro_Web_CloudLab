@@ -1,0 +1,32 @@
+#A decorator in Python is a function that modifies the behavior of another function.
+ # You can use it to add extra functionality to a function without changing its code directly.
+
+
+ def my_decorator(func):
+    def wrapper():
+        print("Something before the function")
+        func()  # Calling the original function
+        print("Something after the function")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+
+
+      def repeat(n):
+    def decorator(func):
+        def wrapper():
+            for _ in range(n):
+                func()  # Repeat the function 'n' times
+        return wrapper
+    return decorator
+
+@repeat(3)
+def say_hello():
+    print("Hello!")
+
+say_hello()
