@@ -263,3 +263,14 @@ Working with templates.
 Defining and using models.
 Using the Django admin interface.
 Querying and displaying data from the database.
+
+
+
+project of django
+Ecommerce website
+Admision form
+Movie reccomendation website
+Book website
+Paggination projct of news artical
+lawyer website
+
